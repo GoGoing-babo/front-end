@@ -1,0 +1,42 @@
+.base-color {
+    color: #707070;
+}
+.border-base-color {
+    border-color: #707070;
+}
+.bg-color {
+    background-color: #FEFEFE;
+}
+.search-box {
+    background-color: #AAA;
+}
+.sc_down {
+    display: none;
+}
+
+.navbar {
+    overflow: hidden;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+label {
+    padding: 0 1px;
+    margin: 0 2px;
+    color: #707070;
+}
+
+select:checked {
+    color: #444;
+}
+
+input[type=radio]:checked + label {
+    border-bottom: 1px solid #888 !important;
+    color: #444 !important;
+}
+
+input[type=radio] + label:hover {
+    cursor: pointer;
+}

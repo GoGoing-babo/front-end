@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- // style -->
+    <link href="./style/style.css" rel="stylesheet" />
+    <!-- // tailwind -->
+    <link rel="stylesheet" href="./style/tailwind.min.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- // bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- javascript -->
+    <script src="js/main.js"></script>
+
+    <title>gogoing</title>
+  </head>
+  <body class="w-full h-full bg-color">
+    <!-- // navbar -->
+    <div class="fixed top-0 w-full">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-b">
+        <div class="container-fluid container">
+          <!-- // logo -->
+          <a class="p-0 navbar-brand" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="76"
+              height="39"
+              viewBox="0 0 76 39"
+            >
+              <text
+                id="고고잉"
+                transform="translate(0 30)"
+                fill="#707070"
+                font-size="32"
+                font-family="LGPC, LG PC"
+              >
+                <tspan x="0" y="0">고고잉</tspan>
+              </text>
+              <text
+                id="고고잉-2"
+                data-name="고고잉"
+                transform="translate(2 32)"
+                fill="#707070"
+                font-size="32"
+                font-family="LGPC, LG PC"
+                opacity="0.2"
+              >
+                <tspan x="0" y="0">고고잉</tspan>
+              </text>
+            </svg>
+          </a>
+          <div class="d-flex" id="navbarText">
+            <!-- // search svg -->
+            <span class="pr-2">
+              <svg
+                id="search"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  id="search-2"
+                  data-name="search"
+                  d="M19.153,15.184a8.466,8.466,0,1,0-1.494,1.494l.045.048,4.49,4.49a1.058,1.058,0,1,0,1.5-1.5l-4.49-4.49ZM16.955,5.5a6.349,6.349,0,1,1-8.979,0A6.349,6.349,0,0,1,16.955,5.5Z"
+                  transform="translate(-4 -1.525)"
+                  fill="#707070"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
+            <!-- // mypage svg -->
+            <span class="pl-2">
+              <svg
+                id="profile"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  id="패스_1041"
+                  data-name="패스 1041"
+                  d="M16,9a4,4,0,1,1-4-4A4,4,0,0,1,16,9ZM14,9a2,2,0,1,1-2-2A2,2,0,0,1,14,9Z"
+                  transform="translate(-2 -1.571)"
+                  fill="#707070"
+                  fill-rule="evenodd"
+                />
+                <path
+                  id="패스_1042"
+                  data-name="패스 1042"
+                  d="M11,1A10,10,0,1,0,21,11,10,10,0,0,0,11,1ZM2.818,11a8.147,8.147,0,0,0,1.735,5.038,8.183,8.183,0,0,1,12.953-.076A8.182,8.182,0,1,0,2.818,11ZM11,19.182a8.148,8.148,0,0,1-5.157-1.829,6.365,6.365,0,0,1,10.387-.061A8.149,8.149,0,0,1,11,19.182Z"
+                  transform="translate(-1 -1)"
+                  fill="#707070"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container pt-2 flex-1 mt-14">
+
+      <!-- // 내신 성적 입력 -->
+      <div class="mb-2 border-none border-base-color py-2 justify-between rounded-md shadow-md">
+        <div class="flex px-2 ">
+          <div class="self-center mr-4 ml-2">
+            <svg id="today" xmlns="http://www.w3.org/2000/svg" width="20" height="24.444" viewBox="0 0 20 24.444">
+              <rect id="사각형_4" data-name="사각형 4" width="12" height="10" rx="1" transform="translate(4 9.63)" fill="#707070" opacity="0.5"/>
+              <path id="패스_1322" data-name="패스 1322" d="M19.667,3.222H6.333A1.111,1.111,0,0,0,5.222,4.333V22.111a1.111,1.111,0,0,0,1.111,1.111H19.667a1.111,1.111,0,0,0,1.111-1.111V4.333A1.111,1.111,0,0,0,19.667,3.222ZM6.333,1A3.333,3.333,0,0,0,3,4.333V22.111a3.333,3.333,0,0,0,3.333,3.333H19.667A3.333,3.333,0,0,0,23,22.111V4.333A3.333,3.333,0,0,0,19.667,1Z" transform="translate(-3 -1)" fill="#707070" fill-rule="evenodd"/>
+              <path id="패스_1323" data-name="패스 1323" d="M7,6A1,1,0,0,1,8,5h4a1,1,0,0,1,0,2H8A1,1,0,0,1,7,6Z" transform="translate(-2.333 -0.511)" fill="#707070"/>
+            </svg>
+            
+          </div>
+          <div class="">
+            <p class="text-lg font-bold base-color m-0">내신 성적 입력</p>
+            <p class="text-sm font-medium base-color m-0">성적을 입력하여 모든 기능을 이용하세요</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- // filter -->
+      <div class="flex justify-end pr-2 py-2 text-center border-base-color self-center">
+        <div class="pr-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20">
+            <path id="filter" d="M19.062,0H.939A.938.938,0,0,0,.276,1.6L7.5,8.826v8.049a.938.938,0,0,0,.4.768l3.125,2.187a.938.938,0,0,0,1.475-.768V8.826L19.725,1.6A.938.938,0,0,0,19.062,0Z" transform="translate(0)" fill="rgba(0,0,0,0.6)"/>
+          </svg>
+        </div>
+        <div>
+          <p class="text-sm base-color m-0">필터</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap mb-2 border-1 border-base-color py-2 justify-between rounded">
+        <div class="flex-col pl-2">
+          <div class="my-1">
+            <span class="text-base font-bold base-color mr-1">위치</span>
+            <span>
+              <select name="area" id="area" class="border-bottom">
+                <option value="">-선택-</option>
+                <option value="">서울</option>
+                <option value="">서울</option>
+                <option value="">서울</option>
+                <option value="">서울</option>
+                <option value="">서울</option>
+                <option value="">서울</option>
+              </select>
+            </span>
+          </div>
+          <div class="my-2">
+            <span class="text-base font-bold base-color mr-1">성별</span>
+              <input type="radio" value="0" name="gen" id="wom" /><label for="wom">여자</label>
+              <input type="radio" value="1" name="gen" id="man" /><label for="man">남자</label>
+            </span>
+          </div>
+          <div class="my-1">
+            <span class="text-base font-bold base-color mr-1">분류</span>
+            <span>
+              <input type="radio" value="5" name="type" id="5" /><label for="5">전체</label>
+              <input type="radio" value="0" name="type" id="0" /><label for="0">일반고</label>
+              <input type="radio" value="1" name="type" id="1" /><label for="1">자율고</label>
+              <input type="radio" value="2" name="type" id="2" /><label for="2">특성화고</label>
+              <input type="radio" value="3" name="type" id="3" /><label for="3">특목고</label>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- // schools -->
+      <div class="flex flex-wrap border-b border-base-color py-2 justify-between border-t">
+        <div class="flex-col pl-2">
+          <div class="pb-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="20"
+              viewBox="0 0 30 20"
+            > 
+              <rect
+                id="사각형_52"
+                data-name="사각형 52"
+                width="30"
+                height="20"
+                rx="8"
+                fill="#bbdbff"
+              />
+              <text
+                id="공학"
+                transform="translate(5 14)"
+                fill="#68a4ff"
+                font-size="10"
+                font-family="MalgunGothic-Semilight, Malgun Gothic"
+                font-weight="300"
+              >
+                <tspan x="0" y="0">공학</tspan>
+              </text>
+            </svg>
+          </div>
+          <div>
+            <p class="text-lg font-bold base-color m-0">
+              경북소프트웨어고등학교
+            </p>
+          </div>
+          <div>
+            <p class="text-base base-color m-0">특성화고등학교</p>
+          </div>
+        </div>
+        <div class="flex-col self-center pr-2">
+          <div>
+            <image
+              width="40"
+              height="40"
+              src="https://w.namu.la/s/e20b59297a01e95a8818dbf422c8d68e42acbbf1d8da6f22b6f0d1f81e4b1ea9f2f81a3a685e2c1561dbd270ea394cc2b7c41af513e9d5ce55eb1279751d9e5a2f704e5a22c702fb01c7f518d66bd232"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap border-b border-base-color py-2 justify-between">
+        <div class="flex-col pl-2">
+          <div class="pb-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="20"
+              viewBox="0 0 30 20"
+            > 
+              <rect
+                id="사각형_52"
+                data-name="사각형 52"
+                width="30"
+                height="20"
+                rx="8"
+                fill="#bbdbff"
+              />
+              <text
+                id="공학"
+                transform="translate(5 14)"
+                fill="#68a4ff"
+                font-size="10"
+                font-family="MalgunGothic-Semilight, Malgun Gothic"
+                font-weight="300"
+              >
+                <tspan x="0" y="0">공학</tspan>
+              </text>
+            </svg>
+          </div>
+          <div>
+            <p class="text-lg font-bold base-color m-0">
+              경북소프트웨어고등학교
+            </p>
+          </div>
+          <div>
+            <p class="text-base base-color m-0">특성화고등학교</p>
+          </div>
+        </div>
+        <div class="flex-col self-center pr-2">
+          <div>
+            <image
+              width="40"
+              height="40"
+              src="https://w.namu.la/s/e20b59297a01e95a8818dbf422c8d68e42acbbf1d8da6f22b6f0d1f81e4b1ea9f2f81a3a685e2c1561dbd270ea394cc2b7c41af513e9d5ce55eb1279751d9e5a2f704e5a22c702fb01c7f518d66bd232"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap border-b border-base-color py-2 justify-between">
+        <div class="flex-col pl-2">
+          <div class="pb-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="20"
+              viewBox="0 0 30 20"
+            > 
+              <rect
+                id="사각형_52"
+                data-name="사각형 52"
+                width="30"
+                height="20"
+                rx="8"
+                fill="#bbdbff"
+              />
+              <text
+                id="공학"
+                transform="translate(5 14)"
+                fill="#68a4ff"
+                font-size="10"
+                font-family="MalgunGothic-Semilight, Malgun Gothic"
+                font-weight="300"
+              >
+                <tspan x="0" y="0">공학</tspan>
+              </text>
+            </svg>
+          </div>
+          <div>
+            <p class="text-lg font-bold base-color m-0">
+              경북소프트웨어고등학교
+            </p>
+          </div>
+          <div>
+            <p class="text-base base-color m-0">특성화고등학교</p>
+          </div>
+        </div>
+        <div class="flex-col self-center pr-2">
+          <div>
+            <image
+              width="40"
+              height="40"
+              src="https://w.namu.la/s/e20b59297a01e95a8818dbf422c8d68e42acbbf1d8da6f22b6f0d1f81e4b1ea9f2f81a3a685e2c1561dbd270ea394cc2b7c41af513e9d5ce55eb1279751d9e5a2f704e5a22c702fb01c7f518d66bd232"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap border-b border-base-color py-2 justify-between">
+        <div class="flex-col pl-2">
+          <div class="pb-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="20"
+              viewBox="0 0 30 20"
+            > 
+              <rect
+                id="사각형_52"
+                data-name="사각형 52"
+                width="30"
+                height="20"
+                rx="8"
+                fill="#bbdbff"
+              />
+              <text
+                id="공학"
+                transform="translate(5 14)"
+                fill="#68a4ff"
+                font-size="10"
+                font-family="MalgunGothic-Semilight, Malgun Gothic"
+                font-weight="300"
+              >
+                <tspan x="0" y="0">공학</tspan>
+              </text>
+            </svg>
+          </div>
+          <div>
+            <p class="text-lg font-bold base-color m-0">
+              경북소프트웨어고등학교
+            </p>
+          </div>
+          <div>
+            <p class="text-base base-color m-0">특성화고등학교</p>
+          </div>
+        </div>
+        <div class="flex-col self-center pr-2">
+          <div>
+            <image
+              width="40"
+              height="40"
+              src="https://w.namu.la/s/e20b59297a01e95a8818dbf422c8d68e42acbbf1d8da6f22b6f0d1f81e4b1ea9f2f81a3a685e2c1561dbd270ea394cc2b7c41af513e9d5ce55eb1279751d9e5a2f704e5a22c702fb01c7f518d66bd232"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap border-b border-base-color py-2 justify-between">
+        <div class="flex-col pl-2">
+          <div class="pb-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="20"
+              viewBox="0 0 30 20"
+            > 
+              <rect
+                id="사각형_52"
+                data-name="사각형 52"
+                width="30"
+                height="20"
+                rx="8"
+                fill="#bbdbff"
+              />
+              <text
+                id="공학"
+                transform="translate(5 14)"
+                fill="#68a4ff"
+                font-size="10"
+                font-family="MalgunGothic-Semilight, Malgun Gothic"
+                font-weight="300"
+              >
+                <tspan x="0" y="0">공학</tspan>
+              </text>
+            </svg>
+          </div>
+          <div>
+            <p class="text-lg font-bold base-color m-0">
+              경북소프트웨어고등학교
+            </p>
+          </div>
+          <div>
+            <p class="text-base base-color m-0">특성화고등학교</p>
+          </div>
+        </div>
+        <div class="flex-col self-center pr-2">
+          <div>
+            <image
+              width="40"
+              height="40"
+              src="https://w.namu.la/s/e20b59297a01e95a8818dbf422c8d68e42acbbf1d8da6f22b6f0d1f81e4b1ea9f2f81a3a685e2c1561dbd270ea394cc2b7c41af513e9d5ce55eb1279751d9e5a2f704e5a22c702fb01c7f518d66bd232"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap border-b border-base-color py-2 justify-between">
+        <div class="flex-col pl-2">
+          <div class="pb-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="20"
+              viewBox="0 0 30 20"
+            > 
+              <rect
+                id="사각형_52"
+                data-name="사각형 52"
+                width="30"
+                height="20"
+                rx="8"
+                fill="#bbdbff"
+              />
+              <text
+                id="공학"
+                transform="translate(5 14)"
+                fill="#68a4ff"
+                font-size="10"
+                font-family="MalgunGothic-Semilight, Malgun Gothic"
+                font-weight="300"
+              >
+                <tspan x="0" y="0">공학</tspan>
+              </text>
+            </svg>
+          </div>
+          <div>
+            <p class="text-lg font-bold base-color m-0">
+              경북소프트웨어고등학교
+            </p>
+          </div>
+          <div>
+            <p class="text-base base-color m-0">특성화고등학교</p>
+          </div>
+        </div>
+        <div class="flex-col self-center pr-2">
+          <div>
+            <image
+              width="40"
+              height="40"
+              src="https://w.namu.la/s/e20b59297a01e95a8818dbf422c8d68e42acbbf1d8da6f22b6f0d1f81e4b1ea9f2f81a3a685e2c1561dbd270ea394cc2b7c41af513e9d5ce55eb1279751d9e5a2f704e5a22c702fb01c7f518d66bd232"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap border-b border-base-color py-2 justify-between">
+        <div class="flex-col pl-2">
+          <div class="pb-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="20"
+              viewBox="0 0 30 20"
+            > 
+              <rect
+                id="사각형_52"
+                data-name="사각형 52"
+                width="30"
+                height="20"
+                rx="8"
+                fill="#bbdbff"
+              />
+              <text
+                id="공학"
+                transform="translate(5 14)"
+                fill="#68a4ff"
+                font-size="10"
+                font-family="MalgunGothic-Semilight, Malgun Gothic"
+                font-weight="300"
+              >
+                <tspan x="0" y="0">공학</tspan>
+              </text>
+            </svg>
+          </div>
+          <div>
+            <p class="text-lg font-bold base-color m-0">
+              경북소프트웨어고등학교
+            </p>
+          </div>
+          <div>
+            <p class="text-base base-color m-0">특성화고등학교</p>
+          </div>
+        </div>
+        <div class="flex-col self-center pr-2">
+          <div>
+            <image
+              width="40"
+              height="40"
+              src="https://w.namu.la/s/e20b59297a01e95a8818dbf422c8d68e42acbbf1d8da6f22b6f0d1f81e4b1ea9f2f81a3a685e2c1561dbd270ea394cc2b7c41af513e9d5ce55eb1279751d9e5a2f704e5a22c702fb01c7f518d66bd232"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap border-b border-base-color py-2 justify-between">
+        <div class="flex-col pl-2">
+          <div class="pb-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="20"
+              viewBox="0 0 30 20"
+            > 
+              <rect
+                id="사각형_52"
+                data-name="사각형 52"
+                width="30"
+                height="20"
+                rx="8"
+                fill="#bbdbff"
+              />
+              <text
+                id="공학"
+                transform="translate(5 14)"
+                fill="#68a4ff"
+                font-size="10"
+                font-family="MalgunGothic-Semilight, Malgun Gothic"
+                font-weight="300"
+              >
+                <tspan x="0" y="0">공학</tspan>
+              </text>
+            </svg>
+          </div>
+          <div>
+            <p class="text-lg font-bold base-color m-0">
+              경북소프트웨어고등학교
+            </p>
+          </div>
+          <div>
+            <p class="text-base base-color m-0">특성화고등학교</p>
+          </div>
+        </div>
+        <div class="flex-col self-center pr-2">
+          <div>
+            <image
+              width="40"
+              height="40"
+              src="https://w.namu.la/s/e20b59297a01e95a8818dbf422c8d68e42acbbf1d8da6f22b6f0d1f81e4b1ea9f2f81a3a685e2c1561dbd270ea394cc2b7c41af513e9d5ce55eb1279751d9e5a2f704e5a22c702fb01c7f518d66bd232"
+            />
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- // footer navbar -->
+    <footer class="bottom-0 left-0 fixed w-full">
+      <div class="navbar navbar-expand-lg navbar-light bg-light border-t py-2">
+        <div class="container-fluid container justify-between px-5">
+          <!-- // comunity -->
+          <div>
+            <svg id="browser" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path id="패스_171" data-name="패스 171" d="M4,8A1,1,0,1,0,3,7,1,1,0,0,0,4,8Z" transform="translate(-0.364 -1.875)" fill="#707070"/>
+              <path id="패스_172" data-name="패스 172" d="M8,7A1,1,0,1,1,7,6,1,1,0,0,1,8,7Z" transform="translate(0.778 -1.875)" fill="#707070"/>
+              <path id="패스_173" data-name="패스 173" d="M10,8A1,1,0,1,0,9,7,1,1,0,0,0,10,8Z" transform="translate(1.334 -1.875)" fill="#707070"/>
+              <path id="패스_174" data-name="패스 174" d="M3,3C1.343,3,0,4.791,0,7V23c0,2.209,1.343,4,3,4H21c1.657,0,3-1.791,3-4V7c0-2.209-1.343-4-3-4ZM21,5.667H3c-.552,0-1,.6-1,1.333v4H22V7C22,6.264,21.552,5.667,21,5.667ZM2,23V13.667H22V23c0,.736-.448,1.333-1,1.333H3C2.448,24.333,2,23.736,2,23Z" transform="translate(0 -3)" fill="#707070" fill-rule="evenodd"/>
+            </svg>
+          </div>
+          <!-- // home -->
+          <div>
+            <svg id="home" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path id="home-2" data-name="home" d="M27,9.42,17.694,1.865a4.681,4.681,0,0,0-5.657,0L3,9.2V24.914h9.333V18.419A2.455,2.455,0,0,1,15,16.255a2.455,2.455,0,0,1,2.667,2.165v6.495H27ZM13.923,3.4,5.667,10.1v12.65h4v-4.33c0-2.391,2.388-4.33,5.333-4.33s5.333,1.939,5.333,4.33v4.33h4V10.317L15.809,3.4A1.56,1.56,0,0,0,13.923,3.4Z" transform="translate(-3 -0.914)" fill="#707070" fill-rule="evenodd"/>
+            </svg>
+          </div>
+          <!-- // setting/ -->
+          <div>
+            <svg id="menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path id="패스_854" data-name="패스 854" d="M2,6A1.114,1.114,0,0,1,3.2,5H24.8A1.114,1.114,0,0,1,26,6a1.114,1.114,0,0,1-1.2,1H3.2A1.114,1.114,0,0,1,2,6Z" transform="translate(-2 -5)" fill="#707070"/>
+              <path id="패스_855" data-name="패스 855" d="M2,12.032a1.114,1.114,0,0,1,1.2-1H24.8a1.114,1.114,0,0,1,1.2,1,1.114,1.114,0,0,1-1.2,1H3.2A1.114,1.114,0,0,1,2,12.032Z" transform="translate(-2 -0.032)" fill="#707070"/>
+              <path id="패스_856" data-name="패스 856" d="M3.2,17.065a1.114,1.114,0,0,0-1.2,1,1.114,1.114,0,0,0,1.2,1H24.8a1.114,1.114,0,0,0,1.2-1,1.114,1.114,0,0,0-1.2-1Z" transform="translate(-2 4.935)" fill="#707070"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
